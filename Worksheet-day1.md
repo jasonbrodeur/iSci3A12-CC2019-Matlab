@@ -1,20 +1,26 @@
-# Day 1 Worksheet
+# Introductory Worksheet
 
 ## A. Course introduction
-Follow along with Jay's introductory presentation to the course.
+Follow along with Jay's introductory presentation to the workshop and assignment.
 
 ## B. Introduction to Matlab
 1. Complete short introductory presentation
-2. Navigate to our course github repository: https://github.com/3IE1/SciComp-2019 
-- Click on 'Clone or Download' and Download the zip file to the /Downloads directory of the computer and unzip it. This is now your working directory.
+2. Download workshop .zip file and assignment sheet from link in A2L (/Content/Climate Change/Individual Assignments/Introduction to Scientific Computing/
+3. Extract to: C:\Users\<yourMacID>\Documents\
+- Make a folder called MATLAB. Copy the zip file there
+- Right click > 7-Zip > “Extract Here”
+- When extracted, you should have the following structure:
+  - C:\....\MATLAB\Data\
+  - C:\....\MATLAB\Figs\
 
 ### B0. Matlab interface
 1. Explore the interface layout. Know the name of each panel, and briefly describe what they do.
-- Change Matlab's working directory to your /Downloads folder
+- Change Matlab's working directory to your newly-created MATLAB folder
 
 ### B1. Basic command window operation
 1. Create a numeric variable using the command window  
   - Create a numeric array and assign it a custom name
+    - ***hint*** ```a = 54``` creates a variable named 'a' with a value of 54
 2. Create a row vector, a column vectors and a matrix 
   - ***hint***: *use brackets [ ] to generate vectors and matrices, commas or spaces to separate values in the same row, and  semi-colons to indicate new rows.*  
   - Create an **5 x 1** column vector; assign it to a named variable. e.g. ```cv = [4; 3; 1; 3; 1]```
@@ -43,7 +49,7 @@ Open a new script, work through the rest of the examples in there.
 - ***tip:*** you can send a line (or many lines) of code to the command window by highlighting them and pressing **F9** 
   
 ### B4. Types of MATLAB variables
-MATLAB provides for a number of different variable types to be used. Typically, the most appropriate variable type depends on the nature of your data and your desired processes and outcomes. Here are the MATLAB  variable types:
+MATLAB provides for a number of different variable types to be used. Typically, the most appropriate variable type depends on the nature of your data and your desired processes and outcomes. Here are the MATLAB variable types:
 
 - **integer** arrays (of varying length, signed/unsigned)
 - **numeric** arrays (real numbers)
@@ -101,7 +107,7 @@ Functions are useful when you are interested in only select output variables in 
 Functions are called by using their name and the output/input format specified above (see below example). For example, the operation 'mean' is a function.  
 - It is called by, e.g. ```[average] = mean(values);``` where 'average' is the output, 'mean' is the function name, and 'values' are the input. 
 
-1. Open \Scripts\isleapyear.m. 
+1. Open \Other Scripts\isleapyear.m. 
 - What does it do? How can we use it? 
 2. Figure out how to use isleapyear from the command line. 
 
@@ -138,65 +144,3 @@ Functions are called by using their name and the output/input format specified a
 - take an integer year as input 
 - check if it is a leap year *and* a prime number
 - display a message if both are true.
-
-## C. Introduction to [git](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control) and Github
-### C1. Setting up your git account ([git documentation](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)):
-1. Set your name: ```git config --global user.name "John Doe"```
-2. Set your email address: ```git config --global user.email johndoe@example.com```
-3. Check your settings ```git config --list```
-
-### C2. How git works
-![alt text](https://git-scm.com/book/en/v2/images/lifecycle.png "git workflow")
-
-### C3. Cloning a repository (from Github)
-- Find a repository of interest on Github; Click the **Clone or download** button; Copy the url provided
-- In git, navigate to the directory where you want to clone (download) the repository contents.
-1. Clone the course repository: ```git clone https://github.com/3IE1/SciComp-2019.git``` (replace url for other repos)
-
-### C4. Checking status, adding and committing changes
-1. Create a new folder in the top directory (i.e. in /Sci-Comp2019/). Name it using your first initial and last name (no spaces)
-2. In the new folder, **right click > create new file > text document**. Rename the file **readme.md**
-- You have now created a markdown 'readme' file. 
-3. Check the status of your repository (i.e. what's been modified): ```git status```
-4. Add items to the list of tracked files (individually): ```git add <filename>```
-- OR Add all items to this list of tracked files: ```git add --all```
-5. Commit changes to git (i.e. record changes): ```git commit -m '<enter a note on what has changed>'```
-- OR add and commit all at once: ```git commit -a -m '<enter a note on what has changed>'```
-  
-### C5. Push changes to a Github repository
-- Ensure that you have permissions to write to the Github repository of interest (must be done in Github)
-- Jay will have given you permission for the course repo.
-1. Push changes to the target Github repository using the command: ```git push origin master```
-- In this example -- which is the default case -- **origin** specifies the remote (i.e. Github) repository that is the target of your 'push'. **master** specifies the branch of the git repository that you're working on as the source data.
-- To check if there are connected remote repositories use the command: ```git remote -v```
-
-### C6. Pull changes 
-- If others have pushed changes to the Github repository, you need to **pull** the changes to sync your local directory
-- Pull changes: ```git pull origin master```
-  - git **pull** actually runs two processes: **fetch** (get changes) and **merge** (place in your directory) 
-- You can check changes (before merging them) with: ```git fetch``` ```git diff origin master```
-
-### C7. More information
-- [Official git documentation page](https://git-scm.com/book/en/v2/)
-- [The Smart Ways to Correct Mistakes in Git](https://css-tricks.com/the-smart-ways-to-correct-mistakes-in-git/) 
-
-## D. An introduction to Markdown
-### D1. What is Markdown? 
-Borrowed shamelessly from Github's [Mastering Markdown](https://guides.github.com/features/mastering-markdown/) page: 
-> Markdown is a way to style text on the web. You control the display of the document; formatting words as bold or italic, adding images, and creating lists are just a few of the things we can do with Markdown. Mostly, Markdown is just regular text with a few non-alphabetic characters thrown in, like # or *.
-
-Markdown uses simple notation to apply simple formatting rules. Since it's pretty much just plain text, it's transferrable and much simpler than marked-up text like HTML or even Word or Google documents. For much of the writing that you do for the web, Markdown is good enough. Github uses Markdown for its documents (this document was created in markdown), as does a variety of other web platforms (Trello, for example). 
-
-Using Markdown in Github lets you create readme files that can use better formatting than a plain text file, but is still readable as plain text -- it's the best of both worlds. 
-
-### D2. Get familiar with Markdown
-1. Using the Github web interface, add some content to your newly-created **readme.md** document. Use the [Mastering Markdown guide](https://guides.github.com/features/mastering-markdown/) as a reference (or other guides on the web) to create a fictional document that contains the following elements: 
-- Headings of a number of different levels
-- bolded, italicized text 
-- insert an image from the web
-- An ordered list
-- A bulleted list
-- A link to another website 
-- A table
-- And finally, an emoji! 
-2. Commit your changes and enjoy the products of your hard work!
