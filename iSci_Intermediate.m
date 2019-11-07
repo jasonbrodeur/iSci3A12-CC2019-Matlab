@@ -4,7 +4,7 @@
 
 %%% Step 1: Define the data location -- adjust this to match your data location:
 data_loc = 'C:\Users\<yourMacID>\Documents\MATLAB\Data\'; 
-% data_loc = 'D:/GDrive/jason.brodeur@gmail.com/Teaching/iSci-3A12/MATLAB Workshop/2016/Matlab/Data/';
+% e.g. data_loc = 'C:\Users\brodeujj\Documents\MATLAB\Data\';
 
 %%% The Scenario:
 % You’ve been given this ‘lucky number generating program’ from a friend.
@@ -104,6 +104,8 @@ csvwrite([data_loc 'lucky_numbers.csv'],lucky_numbers);
 
 % Note that we can assign whatever name we want to a variable when we load
 % it back in.
+
+luck_num = lucky_numbers; % Since we've commented out the task where we reload the data as luck_num, we need this line so we can continue plotting.
 
 %% 7. Plotting:
 
